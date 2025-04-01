@@ -1,0 +1,75 @@
+/* General Navbar Styles */
+.navbar {
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1d2b36;
+    color: white;
+    border-bottom: 1px solid #00cee1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .navbar h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .navbar h1:hover {
+    color: #00cee1;
+  }
+  
+  .navbar h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .navbar h2:hover {
+    color: #00cee1;
+  }
+  
+  /* Navbar right section (history icon and logout) */
+  .navbar div {
+    display: flex;
+    align-items: center;
+  }
+  
+  #history {
+    width: 30px;
+    height: 30px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  #history:hover {
+    opacity: 0.7;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .navbar {
+      padding: 10px 20px;
+    }
+  
+    .navbar h1 {
+      font-size: 20px;
+    }
+  
+    .navbar h2 {
+      font-size: 16px;
+    }
+  
+    #history {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  
