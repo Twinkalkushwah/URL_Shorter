@@ -1,10 +1,9 @@
-export const BASE_URL = "http://localhost:8808";
-
+export const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export const shortenUrl = async (originalUrl) => {
   const token = localStorage.getItem("token");
   try {
-    const response = await fetch(`${BASE_URL}/api/url/shorten`, {
+    const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/url/shorten`, { 
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -22,7 +21,7 @@ export const shortenUrl = async (originalUrl) => {
 export const fetchRecentUrls = async () => {
   const token = localStorage.getItem("token");
   try {
-    const response = await fetch(`${BASE_URL}/api/url/recents`, {
+    const response = await fetch(`${process.env.REACT_APP_BASE_URL}/api/url/recents`, { 
       headers: { Authorization: `Bearer ${token}` },
     });
     const data = await response.json();

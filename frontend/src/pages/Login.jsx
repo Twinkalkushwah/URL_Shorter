@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import swal from "sweetalert";
-import "../styles/Login.css"; // Ensure this file exists
+import "../styles/Login.css"; 
+import { BASE_URL } from "../utils/api";
 
-const API_BASE_URL = "http://localhost:8808/api/auth";
+
+const API_BASE_URL = `${BASE_URL}/api/auth`;
 
 const Login = () => {
   const [email, setEmail] = useState("");

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import swal from "sweetalert";
 import '../styles/Signup.css';
+import { BASE_URL } from "../utils/api";
 
-const API_BASE_URL = "http://localhost:8808/api/auth";
+const API_BASE_URL = `${BASE_URL}/api/auth`;
 
 const Signup = () => {
   const [email, setEmail] = useState("");
