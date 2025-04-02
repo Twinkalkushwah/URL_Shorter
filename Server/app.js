@@ -11,9 +11,9 @@ const cors = require("cors");
 const app = express();
 // app.use(cors());
 app.use(cors({
-  origin: "http://localhost:3000", // Allow frontend to access backend
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Allow these methods
-  allowedHeaders: ["Content-Type", "Authorization"], // Allow these headers
+  origin: "https://url-shorter-sand.vercel.app/login", 
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], 
+  allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true
 }));
 //Handle Preflight Requests  
