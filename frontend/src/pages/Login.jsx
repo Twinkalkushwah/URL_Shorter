@@ -12,7 +12,6 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-console.log("Base URL",BASE_URL)
   const handleLogin = async (e) => {
     e.preventDefault();
 
@@ -41,7 +40,7 @@ console.log("Base URL",BASE_URL)
         swal(data.message, { icon: "info" });
       }
     } catch (error) {
-      swal("Something went wrong! hhh", { icon: "error" });
+      swal("Something went wrong!", { icon: "error" });
       console.error("Login Error:", error);
     }
     setLoading(false);
