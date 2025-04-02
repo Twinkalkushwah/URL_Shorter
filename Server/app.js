@@ -10,12 +10,15 @@ const cors = require("cors");
 
 const app = express();
 // app.use(cors());
-app.use(cors({
-  origin: "https://url-shorter-sand.vercel.app/login", 
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], 
-  allowedHeaders: ["Content-Type", "Authorization"],
-  credentials: true
-}));
+app.use(
+  cors({
+    origin: "https://url-shorter-sand.vercel.app", 
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  })
+);
+
 //Handle Preflight Requests  
 
 app.options("*", cors()); 
